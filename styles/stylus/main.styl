@@ -1,0 +1,187 @@
+
+@import("normalize.css")
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300)
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,300italic,40)
+
+$tamanio = 100%
+
+*
+	margin:0
+	padding:0
+	outline: none
+
+body{
+	line-height: 22px
+	font-size:14px
+	color: #545454
+	font-family: 'Roboto', sans-serif
+	font-weight: 400
+}
+
+h1, h3
+	color: black
+	font-family: 'Oswald', sans-serif
+	font-weight: 400
+
+h1
+	padding: 0
+	margin: 0
+
+ul
+	list-style:none
+	
+.cabecera
+	width: 180px
+	position: fixed
+	top:0
+	left:0
+	bottom: 0
+	background-color: black
+	z-index: 100
+
+.logo
+	padding: 30px 20px 10px 20px
+
+.logo>div
+	height: 140px
+	width: 100%
+	background-color: #FFCC00
+
+.ct-menu ul>li
+	color: white
+	padding-left: 20px
+	padding-right: 20px
+
+.ct-menu .menu-principal>li a
+	display: block
+	padding: 15px 0
+	border-bottom: 1px solid #333333
+	text-transform: uppercase
+	color: white
+	text-decoration: none
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300
+
+.menu-principal>li a:hover
+	color: #ffb400
+
+.contenedor-principal:after
+	display: table
+	content: ""
+	clear: both
+	
+.contenedor-principal
+	position: relative
+	left: 187px
+	width:3226px
+	
+.contenedor-principal>article
+	float:left
+
+.contenedor-principal>article:nth-child(even)
+	background-color: #f7f7f7
+	
+.descripciones
+	position: relative
+	width: 804px
+	min-height: 500px
+
+article > div
+	padding: 70px
+
+article > div > div
+	margin-bottom: 40px
+
+.titulo-principal h1
+	line-height: normal
+	padding: 0px 0px 20px 0
+	font-size: 40px
+	text-transform: uppercase
+	
+.titulo-principal .linea-abajo
+	height:5px
+	width: 80px
+	background-color: #ffb400
+			
+.tabla-informacion .row
+	padding: 13px 0
+	border-bottom: 1px solid #dfdfdf
+	
+.contendedor-descripcion h3
+	text-transform: uppercase
+	margin-bottom: 15px
+	font-size: 16px
+	
+.boton-descarga-cv
+	border: 2px solid #ffb400
+	font-size: 16px
+	text-transform: uppercase
+	font-weight: normal
+	padding: 10px 15px
+	background-color: white
+	color: black
+	font-family: 'Oswald', sans-serif
+	font-weight: 400
+	
+.boton-descarga-cv:hover
+	color:white
+	background-color:#ffb400
+	
+.b-t
+	border-top: 1px solid gray
+	padding-top: 50px
+
+.fila-principal:after
+	display: table
+	content: ""
+	clear: both
+
+.fila-principal>.columna
+	float: left
+	width: 50%
+	margin-bottom: 40px
+
+.columna:after
+	display: table
+	content: ""
+	clear: both
+
+.columna>div
+	float:left
+	box-sizing: border-box
+	width: 50%
+
+.circulo
+	height: 166px
+	border-radius: 50%
+	border: 5px solid rgb(143, 143, 143)
+
+.descripcion-circulo
+	padding-left: 20px;
+	padding-right: 32px;
+	margin-top: 40px
+
+.descripcion-circulo .titulo-circulo h1
+	font-weight: 300
+	text-transform: uppercase
+	line-height: 30px
+	font-size: 25px
+
+.descripcion-circulo>div
+	margin-bottom: 10px
+	
+.w-100
+	width: 100%!important
+
+.lista-conocimientos
+	margin-top: 30px
+	width: tamanio
+	
+.lista-conocimientos>ul:after
+	display: table
+	content: ""
+	clear: both
+
+.lista-conocimientos>ul>li
+	float: left
+	width: ($tamanio/3)
