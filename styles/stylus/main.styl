@@ -1,5 +1,3 @@
-
-@import("normalize.css")
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300)
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,300italic,40)
 
@@ -10,18 +8,25 @@ $tamanio = 100%
 	padding:0
 	outline: none
 
-body{
+body
 	line-height: 22px
 	font-size:14px
 	color: #545454
 	font-family: 'Roboto', sans-serif
 	font-weight: 400
-}
+	overflow-y: hidden
 
 h1, h3
 	color: black
 	font-family: 'Oswald', sans-serif
 	font-weight: 400
+
+a
+	text-decoration: none
+	color: #545454
+	
+textarea
+	resize: none
 
 h1
 	padding: 0
@@ -31,7 +36,7 @@ ul
 	list-style:none
 	
 .cabecera
-	width: 180px
+	width: 187px
 	position: fixed
 	top:0
 	left:0
@@ -73,7 +78,6 @@ ul
 .contenedor-principal
 	position: relative
 	left: 187px
-	width:3226px
 	
 .contenedor-principal>article
 	float:left
@@ -85,6 +89,7 @@ ul
 	position: relative
 	width: 804px
 	min-height: 500px
+	overflow-y: auto
 
 article > div
 	padding: 70px
@@ -128,7 +133,7 @@ article > div > div
 	background-color:#ffb400
 	
 .b-t
-	border-top: 1px solid gray
+	border-top: 1px solid #dfdfdf
 	padding-top: 50px
 
 .fila-principal:after
@@ -136,11 +141,60 @@ article > div > div
 	content: ""
 	clear: both
 
-.fila-principal>.columna
+.fila-principal>div
 	float: left
 	width: 50%
 	margin-bottom: 40px
+	
+.fila-principal__izquierda>div
+	float: left
 
+.fila-principal__izquierda>div:nth-child(1)
+	width: 30%
+	color: #ffb400
+	&:hover
+		color: #000
+
+.fila-principal__izquierda>div:nth-child(1) i
+	font-size: 90px
+
+.fila-principal__izquierda>div:nth-child(2)
+	width: 70%
+
+.fila-principal__izquierda:after
+	display: table
+	content: ''
+	clear: both
+
+.fila-secundaria
+	border-top: 1px solid #dfdfdf
+	padding: 40px 0px
+	margin-bottom: 0px!important
+
+.fila-secundaria>div
+	margin-bottom: 0px!important
+
+.descripcion-experiencia
+	font-family: 'Oswald'
+
+.descripcion-experiencia>h4
+	font-size: 20px
+	text-transform: uppercase
+	font-weight: 500
+	color: black
+	margin-bottom: 15px
+
+.descripcion-experiencia>h3
+	font-size: 28px
+	text-transform: uppercase
+	font-weight: 100
+	margin-bottom: 5px
+
+.descripcion-experiencia>h5
+	font-size: 18px
+	font-weight: 100
+	color: black
+	
 .columna:after
 	display: table
 	content: ""
@@ -185,3 +239,73 @@ article > div > div
 .lista-conocimientos>ul>li
 	float: left
 	width: ($tamanio/3)
+	
+.descripcion-contacto>h4
+	font-size: 15px
+		
+.contact-icon-40
+	font-size: 40px
+
+.contact-icon-50
+	font-size: 50px
+
+.first-h4
+	font-weight: bold
+	text-transform: uppercase
+	color: black
+
+.columna-contacto>div
+	margin-bottom: 20px
+	
+.columna-contacto i
+	color: #ffb400
+	&:hover
+		color: #000
+
+.contenedor-social:after
+	display: table
+	content: ''
+	clear: both
+
+.contenedor-social>div
+	float: left
+	width: 50px
+	font-size: 28px
+
+.contenedor-social>div a:hover
+	color: #000
+
+.form-contacto>input
+.form-contacto>textarea
+	display: block
+	width: 100%
+	padding: 12px
+	font-size: 15px
+	margin-bottom: 20px
+	border: 1px solid #dfdfdf
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:focus
+		border: 1px solid #ffb400
+
+h1.titulo-contacto
+	font-size: 30px
+	margin-bottom: 40px
+	text-transform: uppercase
+
+.grid:after
+	display: table
+	content: ''
+	clear: both
+
+.grid>div
+	float: left
+	
+for num in (1..10)
+	.columna-{num}
+		width: (num*10)%!important
+		min-height: 1px
+
+.m-b-20
+	margin-bottom: 20px

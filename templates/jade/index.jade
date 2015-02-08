@@ -3,6 +3,7 @@ html
 	head
 		meta(charset="utf-8")
 		link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
+		link(rel="stylesheet", type="text/css", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
 		link(rel="stylesheet", type="text/css", href="styles/main.css")		
 		title Jorge Ernesto Torres Medrano
 	body
@@ -13,21 +14,23 @@ html
 				div.ct-menu
 					ul.menu-principal
 						li
-							a(href="#") Inicio
+							a(href="#contenedor-inicio") Inicio
 						li
-							a(href="#") Acerca
+							a(href="#contenedor-acerca") Acerca
 						li
-							a(href="#") Habilidades
+							a(href="#contenedor-hablidades") Habilidades
 						li
-							a(href="#") Experiencia
+							a(href="#contenedor-experiencia") Experiencia
 						li
-							a(href="#") Educación
-						li
+							a(href="#contendedor-educacion") Educación
+						//li
 							a(href="#") Portafolio
 						li
-							a(href="#") Contacto
+							a(href="#contendedor-contacto") Contacto
 			div.contenedor-principal
 				
+				article.descripciones#contenedor-inicio
+
 				article.descripciones#contenedor-acerca
 					div.acerca-interior
 						div.titulo-principal
@@ -126,9 +129,53 @@ html
 								|Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. 
 								|Suspendisse id neque a nibh mollis blandit. 
 								|Quisque varius eros ac purus dignissim.
-						div.fila-principal
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
+									h4 Panara Media
+									h3 art Director
+									h5 2014-2013
 							div.columna
-								div 
+								p
+									|Phasellus nec gravida purus. 
+									|Aliquam ac enim vel ipsum consectetur vulputate. 
+									|Duis quis feugiat neque. Pellentesque eleifend, nisi 
+									|vel mattis vestibulum, est lacus pretium quam.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
+									h4 Panara Media
+									h3 art Director
+									h5 2014-2013
+							div.columna
+								p
+									|Phasellus nec gravida purus. 
+									|Aliquam ac enim vel ipsum consectetur vulputate. 
+									|Duis quis feugiat neque. Pellentesque eleifend, nisi 
+									|vel mattis vestibulum, est lacus pretium quam.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
+									h4 Panara Media
+									h3 art Director
+									h5 2014-2013
+							div.columna
+								p
+									|Phasellus nec gravida purus. 
+									|Aliquam ac enim vel ipsum consectetur vulputate. 
+									|Duis quis feugiat neque. Pellentesque eleifend, nisi 
+									|vel mattis vestibulum, est lacus pretium quam.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
 									h4 Panara Media
 									h3 art Director
 									h5 2014-2013
@@ -151,7 +198,104 @@ html
 								|Proin ornare sem sed quam tempus aliquet vitae eget dolor. 
 								|Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. 
 								|Suspendisse id neque a nibh mollis blandit. 
-								|Quisque varius eros ac purus dignissim.					
+								|Quisque varius eros ac purus dignissim.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
+									h4 Panara Media
+									h3 art Director
+									h5 2014-2013
+							div.columna
+								p
+									|Phasellus nec gravida purus. 
+									|Aliquam ac enim vel ipsum consectetur vulputate. 
+									|Duis quis feugiat neque. Pellentesque eleifend, nisi 
+									|vel mattis vestibulum, est lacus pretium quam.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
+									h4 Panara Media
+									h3 art Director
+									h5 2014-2013
+							div.columna
+								p
+									|Phasellus nec gravida purus. 
+									|Aliquam ac enim vel ipsum consectetur vulputate. 
+									|Duis quis feugiat neque. Pellentesque eleifend, nisi 
+									|vel mattis vestibulum, est lacus pretium quam.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna fila-principal__izquierda")
+								div
+									i(class="fa fa-shirtsinbulk")
+								div.descripcion-experiencia 
+									h4 Panara Media
+									h3 art Director
+									h5 2014-2013
+							div.columna
+								p
+									|Phasellus nec gravida purus. 
+									|Aliquam ac enim vel ipsum consectetur vulputate. 
+									|Duis quis feugiat neque. Pellentesque eleifend, nisi 
+									|vel mattis vestibulum, est lacus pretium quam.					
 
+				article.descripciones#contendedor-contacto
+					div.contacto-interior
+						div.titulo-principal
+							h1 Contacto
+							div.linea-abajo
+						div.contendedor-descripcion
+							h3 Let's Keep In Touch
+							p
+								|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae 
+								|eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a 
+								|nibh mollis blandit. Quisque varius eros ac purus dignissim.
+						div(class="fila-principal fila-secundaria")
+							div(class="columna-5 columna-contacto")
+								div.grid
+									div.columna-2
+										i(class="fa fa-map-marker contact-icon-50")
+									div(class="descripcion-contacto columna-8") 
+										h4(class="first-h4") Jorge Torres Medrano
+										h4 Calle la Huaquilla #456,
+										h4 Huaral, Lima, Perú
+								div.grid
+									div.columna-2
+										i(class="fa fa-phone contact-icon-40")
+									div(class="descripcion-contacto columna-8") 
+										h4(class="first-h4") Teléfono
+										h4 996514952
+								div.grid
+									div.columna-2
+										i(class="fa fa-envelope contact-icon-40")
+									div(class="descripcion-contacto columna-8") 
+										h4(class="first-h4") Email
+										h4 jtorrescolan@gmail.com
+							div.columna-5
+								div(class="contendedor-descripcion m-b-20")
+									h3 I'm also on Social Networks
+									p
+										|Lorem ipsum dolor sit amet, consectetur adipiscing 
+										|elit. Proin ornare sem sed quam tempus aliquet vitae 
+										|eget dolor.
+								div(class="contenedor-social")
+									div
+										a(href="javascript:void(0)")
+											i(class="fa fa-facebook")
+									div
+										a(href="javascript:void(0)")
+											i(class="fa fa-google-plus")
+						div(class="fila-secundaria")
+							h1(class="titulo-contacto") Déjame un mensaje
+							form(class="form-contacto")
+								input(type="text", placeholder="Su nombre")
+								input(type="text", placeholder="Su e-mail")
+								textarea(rows="5", placeholder="Su mensaje...")
+								button(class="boton-descarga-cv") Contactame!
 
+				article.descripciones#contenedor-final
 
+		script(type="text/javascript", src="javascript/main.js")
