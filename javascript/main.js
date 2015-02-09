@@ -72,7 +72,7 @@ var app = (function(){
 
 		var evento = function(){
 
-			var target = this.getAttribute('href'),
+			var target = this.getAttribute('target'),
 				contenedor = document.querySelectorAll('.contenedor-principal'); 
 
 			if(target === '#contenedor-inicio'){
