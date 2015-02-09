@@ -1,6 +1,40 @@
-
 var app = (function(){
 
+	//Metodos Privados
+	function getStyle(style, el){
+		if(window.getComputedStyle)
+			return window.getComputedStyle(el).getPropertyValue(style);
+		else if(el.currentStyle)
+			return el.currentStyle(style);
+	}
+
+	function animacion(el, inicio, final){
+		var left = getStyle('left', el);
+		left = (left==='auto')? 0:parseInt(left.replace('px',''))*(-1);
+
+		if(left !== final){
+			if(final>left){
+				var left_1 = inicio;
+				var id = setInterval(function(){
+					left_1 = left_1 + 67;
+					el.style.left = '-'+left_1+'px';
+					if(left_1 === final)
+						clearInterval(id);
+				},10);
+			}
+			else{
+				var left_1 = left;
+				var id = setInterval(function(){
+					left_1 = left_1 - 67;
+					el.style.left = '-'+left_1+'px';
+					if(left_1 === final)
+						clearInterval(id);
+				},10);	
+			}
+		}
+	};
+
+	//Metodos Públicos
 	function tamanioPrincipal(){
 		var width = 0;
 		var elementos = document.querySelectorAll('.contenedor-principal>article');
@@ -33,8 +67,8 @@ var app = (function(){
 	}
 
 	function cambiarPagina(){
-		var elementos = document.querySelectorAll('.menu-principal>li>a');
-		var l = elementos.length;
+		var elementos = document.querySelectorAll('.menu-principal>li>a'),
+			l = elementos.length;
 
 		var evento = function(){
 
@@ -42,27 +76,39 @@ var app = (function(){
 				contenedor = document.querySelectorAll('.contenedor-principal'); 
 
 			if(target === '#contenedor-inicio'){
-				contenedor[0].style.cssText="-webkit-transform: translate3d(0px,0,0);transform: translate3d(0px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
+				var inicio = getStyle('left', contenedor[0]);
+				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
+				animacion(contenedor[0], inicio, 0);
 			}
 
 			else if(target === '#contenedor-acerca'){
-				contenedor[0].style.cssText="-webkit-transform: translate3d(-804px,0,0);transform: translate3d(-804px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
+				var inicio = getStyle('left', contenedor[0]);
+				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
+				animacion(contenedor[0], inicio, 804);
 			}
 
 			else if(target === '#contenedor-hablidades'){
-				contenedor[0].style.cssText="-webkit-transform: translate3d(-1608px,0,0);transform: translate3d(-1608px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
+				var inicio = getStyle('left', contenedor[0]);
+				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
+				animacion(contenedor[0], inicio, 804*2);
 			}
 
 			else if(target === '#contenedor-experiencia'){
-				contenedor[0].style.cssText="-webkit-transform: translate3d(-2412px,0,0);transform: translate3d(-2412px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
+				var inicio = getStyle('left', contenedor[0]);
+				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
+				animacion(contenedor[0], inicio, 804*3);
 			}
 
 			else if(target === '#contendedor-educacion'){
-				contenedor[0].style.cssText="-webkit-transform: translate3d(-3216px,0,0);transform: translate3d(-3216px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
+				var inicio = getStyle('left', contenedor[0]);
+				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
+				animacion(contenedor[0], inicio, 804*4);
 			}
 
 			else if(target === '#contendedor-contacto'){
-				contenedor[0].style.cssText="-webkit-transform: translate3d(-4020px,0,0);transform: translate3d(-4020px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
+				var inicio = getStyle('left', contenedor[0]);
+				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
+				animacion(contenedor[0], inicio, 804*5);
 			}
 		}
 
