@@ -42,36 +42,28 @@ var app = (function(){
 				contenedor = document.querySelectorAll('.contenedor-principal'); 
 
 			if(target === '#contenedor-inicio'){
-				contenedor[0].style.left = '187px';
-				contenedor[0].style.right = 'initial';
+				contenedor[0].style.cssText="-webkit-transform: translate3d(0px,0,0);transform: translate3d(0px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
 			}
 
 			else if(target === '#contenedor-acerca'){
-				contenedor[0].style.left = 'initial';
-				contenedor[0].style.right = '617px';
+				contenedor[0].style.cssText="-webkit-transform: translate3d(-804px,0,0);transform: translate3d(-804px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
 			}
 
 			else if(target === '#contenedor-hablidades'){
-				contenedor[0].style.left = 'initial';
-				contenedor[0].style.right = '1421px';
+				contenedor[0].style.cssText="-webkit-transform: translate3d(-1608px,0,0);transform: translate3d(-1608px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
 			}
 
 			else if(target === '#contenedor-experiencia'){
-				contenedor[0].style.left = 'initial';
-				contenedor[0].style.right = '2225px';
+				contenedor[0].style.cssText="-webkit-transform: translate3d(-2412px,0,0);transform: translate3d(-2412px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
 			}
 
 			else if(target === '#contendedor-educacion'){
-				contenedor[0].style.left = 'initial';
-				contenedor[0].style.right = '3029px';
+				contenedor[0].style.cssText="-webkit-transform: translate3d(-3216px,0,0);transform: translate3d(-3216px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
 			}
 
 			else if(target === '#contendedor-contacto'){
-				contenedor[0].style.left = 'initial';
-				contenedor[0].style.right = '3833px';
+				contenedor[0].style.cssText="-webkit-transform: translate3d(-4020px,0,0);transform: translate3d(-4020px,0,0);-webkit-transition: -webkit-transform 800ms ease-out;transition: transform 800ms ease-out;width: 5628px;";
 			}
-
-
 		}
 
 		for(var k=0; k<l; k++){

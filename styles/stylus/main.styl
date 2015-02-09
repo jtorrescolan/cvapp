@@ -14,7 +14,7 @@ body
 	color: #545454
 	font-family: 'Roboto', sans-serif
 	font-weight: 400
-	overflow-y: hidden
+	overflow: hidden
 
 h1, h3
 	color: black
@@ -36,7 +36,7 @@ ul
 	list-style:none
 	
 .cabecera
-	width: 187px
+	width: 200px
 	position: fixed
 	top:0
 	left:0
@@ -70,14 +70,19 @@ ul
 .menu-principal>li a:hover
 	color: #ffb400
 
+.contenedor-parent
+	position: absolute
+	left: 200px
+	right: 0px
+	height: 100%
+
+.contenedor-principal
+	position: relative
+
 .contenedor-principal:after
 	display: table
 	content: ""
 	clear: both
-	
-.contenedor-principal
-	position: relative
-	left: 187px
 	
 .contenedor-principal>article
 	float:left
