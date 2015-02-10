@@ -30,8 +30,20 @@ html
 			
 			div.contenedor-parent
 				div.contenedor-principal
-					
-					article.descripciones
+					article(class="descripciones")
+						div(class="acerca-descripciones no-padding pos-rel no-overflow")
+							div(id="slider", class="slider-main no-margin")
+								div.item
+									h1 Hola
+								div.item
+									h1 Mundo
+								div.item
+									h1 Mundial
+							div(class="contenedor-navegador no-margin")
+								div.nav-slider
+									div(class="circulo-nav", index = "1")
+									div(class="circulo-nav", index = "2")
+									div(class="circulo-nav", index = "3")
 
 					article.descripciones
 						div.acerca-interior

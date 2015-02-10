@@ -1,6 +1,45 @@
 var app = (function(){
 
-	//Metodos Privados
+	//Métodos Privados
+
+	function slider(el){
+		if(typeof el === 'string'){
+			var height = window.innerHeight,
+				elementos = document.querySelectorAll(el),
+				items = document.querySelectorAll(el+'> div.item'),
+				width = parseInt(getStyle('width',elementos[0]).replace('px',''));
+
+			elementos[0].style.width = (width*items.length)+'px';
+
+			for(var i=0; i<items.length; i++){
+				items[i].style.height = height + 'px';
+				items[i].style.width = width + 'px';
+			}
+
+			var nav_slider_elements = document.querySelectorAll('.nav-slider>div'),
+				width_nav = 0;
+
+			var evento_click = function(){
+				var index = this.getAttribute('index'),
+					width_items = parseInt(getStyle('width',items[index-1]).replace('px','')),
+					left = parseInt(getStyle('left',elementos[0]).replace('px',''))*(-1);
+					console.log(left);
+				animacion(elementos[0], left, width_items*(index-1));
+			}
+
+			for(var j=0; j<nav_slider_elements.length;j++){
+				width_nav = width_nav + parseInt(getStyle('width',nav_slider_elements[j]).replace('px',''));
+				nav_slider_elements[j].onclick = evento_click;
+			}
+
+			nav_slider_elements[0].parentNode.style.width = width_nav+((4*nav_slider_elements.length)-4)+'px';
+
+		}
+		else{
+			console.error('Selector no válido');
+		}
+	}
+
 	function getStyle(style, el){
 		if(window.getComputedStyle)
 			return window.getComputedStyle(el).getPropertyValue(style);
@@ -32,9 +71,13 @@ var app = (function(){
 				},10);	
 			}
 		}
-	};
+	}
 
-	//Metodos Públicos
+	//Fin Métodos Privados
+
+	
+	//Métodos Públicos
+
 	function tamanioPrincipal(){
 		var width = 0;
 		var elementos = document.querySelectorAll('.contenedor-principal>article');
@@ -55,6 +98,7 @@ var app = (function(){
 		var elementos = document.querySelectorAll('article');
 		for(var i=0;i<elementos.length;i++)
 			elementos[i].style.height = height+'px';
+		document.querySelectorAll('.acerca-descripciones')[0].style.height = height+'px';
 	}
 
 	function eventos(){
@@ -63,6 +107,7 @@ var app = (function(){
 			var elementos = document.querySelectorAll('article');
 			for(var i=0;i<elementos.length;i++)
 				elementos[i].style.height = height+'px';
+			document.querySelectorAll('.acerca-descripciones')[0].style.height = height+'px';
 		}
 	}
 
@@ -117,11 +162,18 @@ var app = (function(){
 		}
 	}
 
+	function cargarSlider(){
+		slider('#slider');
+	}
+
+	//Fin Métodos Públicos
+
 	return {
 		tamanio: tamanio,
 		eventos: eventos,
 		tamanioPrincipal: tamanioPrincipal,
-		cambiarPagina: cambiarPagina
+		cambiarPagina: cambiarPagina,
+		cargarSlider: cargarSlider
 	}
 })();
 
@@ -130,4 +182,5 @@ window.onload = function(){
 	app.tamanio();
 	app.eventos();
 	app.cambiarPagina();
+	app.cargarSlider();
 }
