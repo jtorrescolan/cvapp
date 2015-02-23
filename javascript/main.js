@@ -20,10 +20,11 @@ var app = (function(){
 				width_nav = 0;
 
 			var evento_click = function(){
+				removeClass(nav_slider_elements, 'active');
+				this.className = 'active';
 				var index = this.getAttribute('index'),
 					width_items = parseInt(getStyle('width',items[index-1]).replace('px','')),
 					left = parseInt(getStyle('left',elementos[0]).replace('px',''))*(-1);
-					console.log(left);
 				animacion(elementos[0], left, width_items*(index-1));
 			}
 
@@ -73,6 +74,24 @@ var app = (function(){
 		}
 	}
 
+	function addClass(el,className){
+		var le = el.length;
+		while(le--){
+			if(el[le].className.split(' ').indexOf(className)===-1){
+				el[le].className += ' '+className;
+			}
+		}
+	}
+
+	function removeClass(el, className){
+		var le = el.length;
+		while(le--){
+			if(el[le].className.split(' ').indexOf(className)!==-1){
+				el[le].className = el[le].className.replace(className,'');
+			}
+		}
+	}
+
 	//Fin Métodos Privados
 
 	
@@ -108,6 +127,10 @@ var app = (function(){
 			for(var i=0;i<elementos.length;i++)
 				elementos[i].style.height = height+'px';
 			document.querySelectorAll('.acerca-descripciones')[0].style.height = height+'px';
+			var items = document.querySelectorAll('.slider-main > .item');
+			for(var x=0; items.length; x++){
+				items[x].style.height = height+'px';
+			}
 		}
 	}
 
@@ -116,6 +139,8 @@ var app = (function(){
 			l = elementos.length;
 
 		var evento = function(){
+			var el = this;
+			removeClass(elementos, 'active');
 
 			var target = this.getAttribute('target'),
 				contenedor = document.querySelectorAll('.contenedor-principal'); 
@@ -124,36 +149,42 @@ var app = (function(){
 				var inicio = getStyle('left', contenedor[0]);
 				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
 				animacion(contenedor[0], inicio, 0);
+				el.className = 'active';
 			}
 
 			else if(target === '#contenedor-acerca'){
 				var inicio = getStyle('left', contenedor[0]);
 				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
 				animacion(contenedor[0], inicio, 804);
+				el.className = 'active';
 			}
 
 			else if(target === '#contenedor-hablidades'){
 				var inicio = getStyle('left', contenedor[0]);
 				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
 				animacion(contenedor[0], inicio, 804*2);
+				el.className = 'active';
 			}
 
 			else if(target === '#contenedor-experiencia'){
 				var inicio = getStyle('left', contenedor[0]);
 				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
 				animacion(contenedor[0], inicio, 804*3);
+				el.className = 'active';
 			}
 
 			else if(target === '#contendedor-educacion'){
 				var inicio = getStyle('left', contenedor[0]);
 				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
 				animacion(contenedor[0], inicio, 804*4);
+				el.className = 'active';
 			}
 
 			else if(target === '#contendedor-contacto'){
 				var inicio = getStyle('left', contenedor[0]);
 				inicio = (inicio==='auto')? 0:parseInt(inicio.replace('px',''))*(-1);
 				animacion(contenedor[0], inicio, 804*5);
+				el.className = 'active';
 			}
 		}
 

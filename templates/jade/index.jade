@@ -2,6 +2,7 @@ doctype html
 html
 	head
 		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
 		link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
 		link(rel="stylesheet", type="text/css", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
 		link(rel="stylesheet", type="text/css", href="styles/main.css")		
@@ -9,12 +10,13 @@ html
 	body
 		div#wrapper
 			div.cabecera
-				div.logo
+				div(class="logo m-b-30")
 					div.nombre-persona
+						span Jorge Torres
 				div.ct-menu
 					ul.menu-principal
 						li
-							a(href="javascript:void(0)",target="#contenedor-inicio") Inicio
+							a(class="active" href="javascript:void(0)",target="#contenedor-inicio") Inicio
 						li
 							a(href="javascript:void(0)",target="#contenedor-acerca") Acerca
 						li
@@ -33,15 +35,12 @@ html
 					article(class="descripciones")
 						div(class="acerca-descripciones no-padding pos-rel no-overflow")
 							div(id="slider", class="slider-main no-margin")
-								div.item
-									h1 Hola
-								div.item
-									h1 Mundo
-								div.item
-									h1 Mundial
+								div(class="item bg-image-1 bg-image")
+								div(class="item bg-image-2 bg-image")
+								div(class="item bg-image-3 bg-image")
 							div(class="contenedor-navegador no-margin")
 								div.nav-slider
-									div(class="circulo-nav", index = "1")
+									div(class="circulo-nav active", index = "1")
 									div(class="circulo-nav", index = "2")
 									div(class="circulo-nav", index = "3")
 
@@ -53,17 +52,17 @@ html
 							div.tabla-informacion
 								div.row Nombre: Jorge Ernesto Torres Medrano
 								div.row Email: cheche6481@gmail.com
-								div.row Teléfono: (+51) 996514952
+								div.row Teléfono: (+51) 988340098
 								div.row Fecha de nacimiento: 09 de Abril de 1964
 								div.row Direccion: Calle La Huaquilla N° 456 int D 2do Piso, Huaral, Lima, Peru
 								div.row Nacionalidad: Peruana
 							div.contendedor-descripcion
 								h3 Perfil Profesional
 								p
-									|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									|Proin ornare sem sed quam tempus aliquet vitae eget dolor. 
-									|Proin eu ultrices libero. Curabitur vulputate vestibulum 
-									|elementum. Suspendisse id neque a nibh mollis blandit.
+									|Técnico eléctrico de profesión especializado en electricidad, 
+									|con experiencia en entubado y canalización de tuberias eléctricas y corrientes débiles, 
+									|trabajos en estructura, tabiqueria y lectura de planos electricos en toda escala. 
+									|Experiencia de 6 años en el extranjero como maestro eléctrico.
 							div
 								button.boton-descarga-cv Descargar resumen en pdf
 					
@@ -73,62 +72,105 @@ html
 								h1 Habilidades
 								div.linea-abajo
 							div.contendedor-descripcion
-								h3 Mis asombrosas habilidades
+								h3 Mis habilidades
 								p
-									|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									|Proin ornare sem sed quam tempus aliquet vitae eget dolor. 
-									|Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. 
-									|Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac 
-									|purus dignissim.
+									|Cuento con habilidades en electicidad, electrónica, rebobinado, y mantenimiento y reparación
+									|de electrodomésticos.
 							div.habilidades-porcentaje
 								div.fila-principal
 									div.columna
-										div.circulo
+										div
+											div.circulo
+												p 96%
 										div.descripcion-circulo
 											div.titulo-circulo 
-												h1 Film editing
-											div Expert, 4 years
+												h1 Instalciones eléctricas en edificaciones
+											div Experto, 6 años
 									div.columna
-										div.circulo
+										div
+											div.circulo
+												p 90%
 										div.descripcion-circulo
 											div.titulo-circulo 
-												h1 Film editing
-											div Expert, 4 years
+												h1 Electrónica
+											div Experto, 5 años
 									div.columna
-										div.circulo
+										div
+											div.circulo
+												p 80%
 										div.descripcion-circulo
 											div.titulo-circulo 
-												h1 Film editing
-											div Expert, 4 years
+												h1 Instalación y rebobinado de motores
+											div Avanzado, 3 años
 									div.columna
-										div.circulo
+										div
+											div.circulo
+												p 88%
 										div.descripcion-circulo
 											div.titulo-circulo 
-												h1 Film editing
-											div Expert, 4 years
+												h1 Reparación y Mantenimiento de electrodomésticos
+											div Avanzado, 3 años
 							div.conocimientos.b-t
-								div.contendedor-descripcion
+								div(class="contendedor-descripcion m-b-20")
 									h3 Conocimientos
-									p
-										|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-										|Proin ornare sem sed quam tempus aliquet vitae eget dolor. 
-										|Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. 
-										|Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac 
-										|purus dignissim.
-								div.lista-conocimientos
+								div.lista-conocimientos-1
 									ul
-										li 1
-										li 2
-										li 3
-										li 4
-										li 5
-										li 6
-										li 7
-										li 8
-										li 9
-										li 10
-										li 11
-										li 12
+										li 
+											span(class="m-r-5")
+												i(class="fa fa-check")
+											|Entubado y canalización de tuberias eléctricas y corrientes débiles
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Trabajos en estructuras, tabiquerias y montajes eléctricos.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Trabajos en loza y cielo falso.
+										li 
+											span(class="m-r-5")
+												i(class="fa fa-check")
+											|Instalaciones eléctricas de casas y edificios.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Instalaciones de interruptores simples, dobles, triples, de conmutación y de cruzamiento.
+										li 
+											span(class="m-r-5")
+												i(class="fa fa-check")
+											|Instalaciones de verticales con telerruptores temporizados.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Instalaciones de sensores de movimiento.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Armado de tablero eléctrico TDA y tablero de control TCL.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Montaje eléctrico de canaletas, escalerillas y tuberias conduit (EMT).
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Lectura de planos eléctricos en toda escala.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Instalaciones de camara de seguridad, intercomunicadores, proyectores y de bomba de agua (Tanque elevado).
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Arranque directo de motores con sistema de temporización, control de temperatura y protección térmica.
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Reparación de electrodomésticos (lavadora, microondas, etc).
+										li
+											span(class="m-r-5")
+												i(class="fa fa-check") 
+											|Rebobinado de motores monofásicos y trifásicos.
 					
 					article.descripciones
 						div.experiencia-interior
@@ -136,69 +178,71 @@ html
 								h1 Experiencia
 								div.linea-abajo
 							div.contendedor-descripcion
-								h3 4 años de experiencia
+								h3 6 años de experiencia
 								p
-									|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									|Proin ornare sem sed quam tempus aliquet vitae eget dolor. 
-									|Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. 
-									|Suspendisse id neque a nibh mollis blandit. 
-									|Quisque varius eros ac purus dignissim.
-							div(class="fila-principal fila-secundaria")
+									|Cuento con 6 años de experiencia en el área de electricidad de edificaciones y casas (Santiago de Chile),
+									|también cuento con experiencia en instalacion y rebobinado de motores eléctricos, reparación
+									|de electrodomésticos y electrónica.
+							div(class="fila-principal-1 fila-principal fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-building")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
-										h5 2014-2013
+										h4 OR Electric
+										h3 Maestro
+										h5 2013-2014
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam.
-							div(class="fila-principal fila-secundaria")
+										|Trabajo realizado desde Abril del 2013 a Octubre del 2014 en la empresa OR Electric, 
+										|ocupando el puesto de maestro eléctrico.
+							div(class="fila-principal fila-principal-1 fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-building-o")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
-										h5 2014-2013
+										h4 A.S.E.S
+										h3 Maestro
+										h5 2012-2013
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam.
-							div(class="fila-principal fila-secundaria")
+										|Trabajo realizado desde Mayo del 2012 a Marzo del 2013 en la empresa A.S.E.S,
+										|ocupando el puesto de maestro eléctrico.
+							div(class="fila-principal fila-principal-1 fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-building")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
-										h5 2014-2013
+										h4 Alberto Mayor Roig
+										h3 Maestro
+										h5 2011-2012
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam.
-							div(class="fila-principal fila-secundaria")
+										|Trabajo realizado desde Noviembre del 2011 a Mayo del 2012 en la constructora
+										|Alberto Mayor Roig, ocupando el puesto de maestro eléctrico.
+							div(class="fila-principal fila-principal-1 fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-building-o")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
-										h5 2014-2013
+										h4 JVR
+										h3 Maestro
+										h5 2010-2011
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam. 
+										|Trabajo realizado desde Noviembre del 2010 a Octubre del 2011 en la constructora
+										|eléctrica Jorge Vega Ramirez, ocupando el puesto de maestro eléctrico.
+							div(class="fila-principal fila-principal-1 fila-secundaria")
+								div(class="columna fila-principal__izquierda")
+									div
+										i(class="fa fa-building")
+									div.descripcion-experiencia 
+										h4 INGPRO
+										h3 Maestro
+										h5 2008-2010
+								div.columna
+									p
+										|Trabajo realizado desde Enero del 2008 a Octubre del 2010 en la constructora
+										|eléctrica Ingeniería y Proyectos, ocupando el puesto de maestro eléctrico. 
 					
 					article.descripciones
 						div.educacion-interior
@@ -206,55 +250,46 @@ html
 								h1 Educación
 								div.linea-abajo
 							div.contendedor-descripcion
-								h3 Solo mi educación
+								h3 Mi educación
 								p
-									|Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-									|Proin ornare sem sed quam tempus aliquet vitae eget dolor. 
-									|Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. 
-									|Suspendisse id neque a nibh mollis blandit. 
-									|Quisque varius eros ac purus dignissim.
-							div(class="fila-principal fila-secundaria")
+									|Estudios técnicos en electrónica, con una especializacion en electricidad y
+									|estudios de rebobinado de motores eléctricos.
+							div(class="fila-principal fila-principal-1 fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-file-o")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
+										h4 I.S.T CESCA
+										h3 Electrónica
 										h5 2014-2013
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam.
-							div(class="fila-principal fila-secundaria")
+										|Realice mis estudios superiores en el Instituto Superior Tecnológico CESCA, 
+										|consiguiendo el título de Técnico en Electrónica.
+							div(class="fila-principal fila-principal-1 fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-building-o")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
+										h4 Gamor
+										h3 Electricidad
 										h5 2014-2013
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam.
-							div(class="fila-principal fila-secundaria")
+										|Realice mis estudios de especialización en la Institución Educativa La Gamor
+										|en el área de electricidad. 
+							div(class="fila-principal fila-principal-1 fila-secundaria")
 								div(class="columna fila-principal__izquierda")
 									div
-										i(class="fa fa-shirtsinbulk")
+										i(class="fa fa-cog")
 									div.descripcion-experiencia 
-										h4 Panara Media
-										h3 art Director
+										h4 Jorge Chávez
+										h3 Rebobinado
 										h5 2014-2013
 								div.columna
 									p
-										|Phasellus nec gravida purus. 
-										|Aliquam ac enim vel ipsum consectetur vulputate. 
-										|Duis quis feugiat neque. Pellentesque eleifend, nisi 
-										|vel mattis vestibulum, est lacus pretium quam.					
+										|Curso de especialización en instalación y rebobinado de motores eléctricos en 
+										|la Institución Educativa Jorge Chávez.					
 
 					article.descripciones
 						div.contacto-interior
@@ -262,11 +297,10 @@ html
 								h1 Contacto
 								div.linea-abajo
 							div.contendedor-descripcion
-								h3 Let's Keep In Touch
+								h3 Datos de contacto
 								p
-									|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae 
-									|eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a 
-									|nibh mollis blandit. Quisque varius eros ac purus dignissim.
+									|Puede contactarme usando mis datos personales, a través de mis redes sociales o
+									|simplemente enviándome un mensaje.
 							div(class="fila-principal fila-secundaria")
 								div(class="columna-5 columna-contacto")
 									div.grid
@@ -281,35 +315,35 @@ html
 											i(class="fa fa-phone contact-icon-40")
 										div(class="descripcion-contacto columna-8") 
 											h4(class="first-h4") Teléfono
-											h4 996514952
+											h4 988340098
 									div.grid
 										div.columna-2
 											i(class="fa fa-envelope contact-icon-40")
 										div(class="descripcion-contacto columna-8") 
 											h4(class="first-h4") Email
-											h4 jtorrescolan@gmail.com
+											h4 cheche6481@gmail.com
 								div.columna-5
 									div(class="contendedor-descripcion m-b-20")
-										h3 I'm also on Social Networks
+										h3 También estoy en las redes sociales
 										p
-											|Lorem ipsum dolor sit amet, consectetur adipiscing 
-											|elit. Proin ornare sem sed quam tempus aliquet vitae 
-											|eget dolor.
+											|Puedes contactarme buscandome en las principales
+											|redes sociales.
 									div(class="contenedor-social")
 										div
-											a(href="javascript:void(0)")
+											a(href="https://www.facebook.com/jorgeernesto.torresmedrano" target="_blank")
 												i(class="fa fa-facebook")
 										div
-											a(href="javascript:void(0)")
+											a(href="https://plus.google.com/u/0/103550570992471061410/about" target="_blank")
 												i(class="fa fa-google-plus")
-							div(class="fila-secundaria")
+							//div(class="fila-secundaria")
 								h1(class="titulo-contacto") Déjame un mensaje
 								form(class="form-contacto")
 									input(type="text", placeholder="Su nombre")
 									input(type="text", placeholder="Su e-mail")
+									input(type="text", placeholder="Su teléfono")
 									textarea(rows="5", placeholder="Su mensaje...")
 									button(class="boton-descarga-cv") Contactame!
 
-					article.descripciones
+					article(class="descripciones bg-image-4 bg-image")
 
 		script(type="text/javascript", src="javascript/main.js")

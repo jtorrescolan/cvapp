@@ -11,7 +11,7 @@ body {
   color: #545454;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 h1,
 h3 {
@@ -50,6 +50,15 @@ ul {
   width: 100%;
   background-color: #fc0;
 }
+.nombre-persona > span {
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 30px;
+  display: block;
+  padding: 40px 13px;
+  text-align: center;
+  color: #000;
+}
 .ct-menu ul>li {
   color: #fff;
   padding-left: 20px;
@@ -68,6 +77,9 @@ ul {
 .menu-principal>li a:hover {
   color: #ffb400;
 }
+.menu-principal>li a.active {
+  color: #ffb400 !important;
+}
 .contenedor-parent {
   position: absolute;
   left: 200px;
@@ -85,7 +97,7 @@ ul {
 .contenedor-principal>article {
   float: left;
 }
-.contenedor-principal>article:nth-child(even) {
+.contenedor-principal>article:nth-child(odd) {
   background-color: #f7f7f7;
 }
 .descripciones {
@@ -146,8 +158,11 @@ article > div > div {
 }
 .fila-principal>div {
   float: left;
-  width: 50%;
+  width: 100%;
   margin-bottom: 40px;
+}
+.fila-principal-1 > div {
+  width: 50% !important;
 }
 .fila-principal__izquierda>div {
   float: left;
@@ -210,14 +225,25 @@ article > div > div {
   width: 50%;
 }
 .circulo {
-  height: 166px;
+  height: 178px;
+  margin: 0 auto;
   border-radius: 50%;
+  width: 55%;
   border: 5px solid #8f8f8f;
+  background-color: #fff;
+}
+.circulo > p {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 73px;
+  color: #ffb400;
+}
+.circulo > p:hover {
+  font-weight: bold;
+  color: #000;
 }
 .descripcion-circulo {
-  padding-left: 20px;
-  padding-right: 32px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .descripcion-circulo .titulo-circulo h1 {
   font-weight: 300;
@@ -243,6 +269,13 @@ article > div > div {
 .lista-conocimientos>ul>li {
   float: left;
   width: 33.333333333333336%;
+}
+.lista-conocimientos-1 {
+  padding-left: 10px;
+}
+.lista-conocimientos-1 > ul > li {
+  display: block;
+  margin-bottom: 10px;
 }
 .descripcion-contacto>h4 {
   font-size: 15px;
@@ -331,8 +364,8 @@ h1.titulo-contacto {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border: 1px solid #000;
-  background-color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
   margin-bottom: -6px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -344,10 +377,27 @@ h1.titulo-contacto {
   cursor: pointer;
 }
 .nav-slider>div:hover {
-  background-color: #000;
+  background-color: #fff;
 }
 .nav-slider>div.active {
-  background-color: #000;
+  background-color: #fff;
+}
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.bg-image-1 {
+  background-image: url("../images/bg_1.jpg");
+}
+.bg-image-2 {
+  background-image: url("../images/bg_2.jpg");
+}
+.bg-image-3 {
+  background-image: url("../images/bg_3.jpg");
+}
+.bg-image-4 {
+  background-image: url("../images/bg_4.jpg");
 }
 .grid:after {
   display: table;
@@ -399,6 +449,12 @@ h1.titulo-contacto {
 }
 .m-b-20 {
   margin-bottom: 20px;
+}
+.m-b-30 {
+  margin-bottom: 30px;
+}
+.m-r-5 {
+  margin-right: 5px;
 }
 .pos-rel {
   position: relative;
